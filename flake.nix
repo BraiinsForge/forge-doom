@@ -4,7 +4,7 @@
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-25.05";
     fbdoom-deck = {
-      url = "github:BraiinsForge/fbDOOM-fork/doom-deck";
+      url = "github:BraiinsForge/fbDOOM-fork/doom-deck-mp";
       flake = false;
     };
     fbdoom-miniminer = {
