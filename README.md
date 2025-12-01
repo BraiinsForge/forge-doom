@@ -47,6 +47,40 @@ chmod +x fbdoom
 
 A DOOM WAD file is included in the `game_files/` directory of this repository.
 
+## Multiplayer
+
+Play DOOM with multiple Decks on the same network!
+
+### Starting a Server (Host)
+
+On the Deck that will host the game:
+
+```bash
+./fbdoom -server -nodes 2 -iwad doom.wad
+```
+
+- `-server` - Start as the game server (this player also plays)
+- `-nodes 2` - Wait for 2 players before starting (adjust for more players)
+
+### Joining a Game (Client)
+
+On other Decks, connect to the server's IP address:
+
+```bash
+./fbdoom -connect <server-ip> -iwad doom.wad
+```
+
+For example:
+```bash
+./fbdoom -connect 192.168.1.241 -iwad doom.wad
+```
+
+### Multiplayer Tips
+
+- All players must use the same WAD file
+- The server player sets game options
+- The game starts automatically when the expected number of players join
+
 ## Building from Source
 
 Want to compile fbDOOM yourself instead of using the pre-built binary? Check out [BUILD.md](BUILD.md) for complete instructions.
